@@ -1,0 +1,15 @@
+../.idea/.gitignore
+.idea/dv_techtask.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/.gitignore
+venv/
+.idea/vcs.xml
+app/__pycache__/
+terraform/.terraform.lock.hcl
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+.idea/codeStyles/
+app/app/__pycache__/
