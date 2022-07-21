@@ -13,3 +13,5 @@ terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
 .idea/codeStyles/
 app/app/__pycache__/
+/terraform/aws_key
+/terraform/aws_key.pub

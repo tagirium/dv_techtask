@@ -12,8 +12,6 @@ terraform {
 provider "aws" {
   profile = "default"
   region  = "us-east-2"
-  access_key = "AKIAQ6H4MP7QNEAASPWO"
-  secret_key = "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"
 }
 
 resource "aws_instance" "app_python" {
