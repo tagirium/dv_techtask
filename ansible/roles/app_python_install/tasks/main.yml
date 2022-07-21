@@ -1,3 +1,4 @@
+---
 - name: Ensure Pip is installed.
   become: true
   package:
@@ -28,7 +29,7 @@
 
 - name: Run docker-compose
   become: true
-  community.docker.docker_compose:
+  docker_compose:
     pull: true
     recreate: always
     state: present
