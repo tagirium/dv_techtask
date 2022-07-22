@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run playbook
-      uses: dawidd6/action-ansible-playbook@v2
       working-directory: /home/runner/work/dv_techtask/dv_techtask/ansible
+      uses: dawidd6/action-ansible-playbook@v2
       with:
         # Required, playbook filepath
         playbook: setup_app.yml
