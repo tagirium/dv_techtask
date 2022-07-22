@@ -28,11 +28,8 @@ jobs:
         with:
           images: tagirium/dv_techtask
 
-      - name: tests
-        run: ls /home/runner/work/dv_techtask/dv_techtask/app
-
       - name: Build Docker image
-        working-directory: ./app/app
+        working-directory: ./app
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/dv_techtask:$(date +%s) .
 
       - name: Docker push
