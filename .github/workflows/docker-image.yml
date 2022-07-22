@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   push_to_registry:
@@ -25,10 +28,8 @@ jobs:
         with:
           images: tagirium/dv_techtask
       
-      - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-        with:
-          context: ./app/app
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+      - name: Build Docker image
+        run: docker build ./app/app --file Dockerfile -t tagirium/dv_techtask:$(date +%s)
+
+      - name: Docker push
+        run: docker push tagirium/dv_techtask:$(date +%s)
