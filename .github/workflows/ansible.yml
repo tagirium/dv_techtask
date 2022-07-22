@@ -9,8 +9,10 @@ jobs:
   run_playbook:
     runs-on: ubuntu-latest
     steps:
+    - name: change directory
+      run: cd ./ansible
+
     - name: Run playbook
-      working-directory: ./ansible/roles
       uses: dawidd6/action-ansible-playbook@v2
       with:
         # Required, playbook filepath
