@@ -1,5 +1,8 @@
 name: Run ansible playbook
 on:
+  push:
+    branches:
+      - main
   workflow_run:
     workflows: [Publish Docker image]
     types:
@@ -9,7 +12,7 @@ jobs:
   run_playbook:
     steps:
     - name: Run playbook
-      usess: dawidd6/action-ansible-playbook@v2
+      uses: dawidd6/action-ansible-playbook@v2
       with:
         # Required, playbook filepath
         playbook: setup_app.yml
