@@ -8,6 +8,7 @@ on:
 jobs:
   run_playbook:
     runs-on: ubuntu-latest
+
     steps:
     - name: Change directory
       working-directory: /home/runner/work/dv_techtask/dv_techtask/ansible
