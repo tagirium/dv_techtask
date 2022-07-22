@@ -14,6 +14,6 @@ jobs:
         # Required, playbook filepath
         playbook: setup_app.yml
         # Optional, directory where playbooks live
-        directory: ../../ansible/roles/
+        directory: ./ansible/roles/
         # Optional, SSH private key
         key: ${{secrets.SSH_PRIVATE_KEY}}

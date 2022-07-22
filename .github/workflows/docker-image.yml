@@ -29,7 +29,8 @@ jobs:
           images: tagirium/dv_techtask
       
       - name: Build Docker image
-        run: docker build ./app/app --file Dockerfile -t tagirium/dv_techtask:$(date +%s)
+        working-directory: ./app/app
+        run: docker build . --file Dockerfile -t tagirium/dv_techtask:$(date +%s)
 
       - name: Docker push
         run: docker push tagirium/dv_techtask:$(date +%s)
