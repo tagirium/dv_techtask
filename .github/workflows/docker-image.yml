@@ -30,7 +30,7 @@ jobs:
       
       - name: Build Docker image
         working-directory: ./app/app
-        run: docker build . --file Dockerfile -t tagirium/dv_techtask:$(date +%s)
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/dv_techtask:$(date +%s) .
 
       - name: Docker push
-        run: docker push tagirium/dv_techtask:$(date +%s)
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/dv_techtask:$(date +%s)
