@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run playbook
+      working-directory: ./ansible/roles
       uses: dawidd6/action-ansible-playbook@v2
       with:
         # Required, playbook filepath
