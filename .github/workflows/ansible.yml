@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: change directory
-      run: cd ./ansible
+      run: ls
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
