@@ -9,8 +9,10 @@ jobs:
   run_playbook:
     runs-on: ubuntu-latest
     steps:
-    - name: Run playbook
+    - name: Change directory
       working-directory: /home/runner/work/dv_techtask/dv_techtask/ansible
+
+    - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:
         # Required, playbook filepath
