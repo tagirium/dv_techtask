@@ -14,6 +14,6 @@ jobs:
       with:
         # Required, playbook filepath
         playbook: setup_app.yml
-        diretory: /home/runner/work/dv_techtask/dv_techtask/ansible
+        directory: /home/runner/work/dv_techtask/dv_techtask/ansible
         # Optional, SSH private key
         key: ${{secrets.SSH_PRIVATE_KEY}}
