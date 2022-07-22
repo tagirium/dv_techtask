@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run playbook
+      working-directory: ./ansible
       uses: dawidd6/action-ansible-playbook@v2
       with:
         # Required, playbook filepath
         playbook: setup_app.yml
         # Optional, directory where playbooks live
-        directory: ./ansible/roles/
+        directory: .
         # Optional, SSH private key
         key: ${{secrets.SSH_PRIVATE_KEY}}
