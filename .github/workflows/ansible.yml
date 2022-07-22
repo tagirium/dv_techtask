@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
+
     - name: Change directory
       run: ls /home/runner/work/dv_techtask/dv_techtask
 
