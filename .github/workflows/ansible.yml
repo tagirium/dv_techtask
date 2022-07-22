@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Change directory
-      working-directory: /home/runner/work/dv_techtask/dv_techtask/ansible
+      run: cd /home/runner/work/dv_techtask/dv_techtask/ansible
 
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
