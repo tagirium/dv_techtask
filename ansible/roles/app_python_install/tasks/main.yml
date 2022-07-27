@@ -29,8 +29,5 @@
 
 - name: Run docker-compose
   become: true
-  docker_compose:
-    pull: true
-    recreate: always
-    state: present
-    project_src: /opt/python_app/
+  shell:
+    cmd: "docker-compose --file /opt/python_app/docker-compose.yml up -d"

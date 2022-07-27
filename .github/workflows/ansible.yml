@@ -16,8 +16,6 @@ jobs:
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:
-        # Required, playbook filepath
         playbook: setup_app.yml
         directory: /home/runner/work/dv_techtask/dv_techtask/ansible
-        # Optional, SSH private key
         key: ${{secrets.SSH_PRIVATE_KEY}}

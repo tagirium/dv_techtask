@@ -5,6 +5,7 @@ variable "profile" {
 variable "owner" {
   description = "Configuration owner"
   type        = string
+  default = "tagir"
 }
 
 variable "region" {

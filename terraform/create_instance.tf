@@ -32,11 +32,11 @@ resource "aws_instance" "app_python" {
   }
 
   provisioner "remote-exec" {
-    inline = ["sudo apt update && sudo apt update  && sudo apt install python3-pip -y"]
+    inline = ["sudo apt update && sudo apt update && sudo apt install python3-pip -y"]
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -u ${var.ansible_user} -i '${aws_instance.app_python.public_ip},' --private-key ${var.private_key} ../ansible/setup_app.yml"
+    command = "sudo -H ansible-playbook -u ${var.ansible_user} -i '${aws_instance.app_python.public_ip},' --private-key ${var.private_key} -e 'ansible_python_interpreter=/usr/bin/python3' ../ansible/setup_app.yml"
   }
 
   tags = {
