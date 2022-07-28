@@ -4,3 +4,4 @@ services:
     image: {{ docker_image_name }}:{{ docker_image_tag }}
     ports:
       - "{{ python_app_outer_port }}:{{ python_app_inner_port }}"
+      - "{{ python_app_secured_outer_port }}:{{ python_app_secured_inner_port }}"

@@ -2,4 +2,6 @@ docker_image_name: tagirium/dv_techtask
 docker_image_tag: v1.0
 python_app_outer_port: 80
 python_app_inner_port: 8000
+python_app_secured_outer_port: 443
+python_app_secured_inner_port: 8000
 docker_restart_handler_state: restarted
