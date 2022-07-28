@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt --no-cache-dir && adduser user
 USER user
 HEALTHCHECK --interval=5m --timeout=3s \
     CMD curl -f http://localhost/ || exit 1
-CMD [ "uvicorn", "index:app", "--reload", "--host", "0.0.0.0", "--port", "443", "--ssl-certfile", "./techtask.crt", "--ssl-keyfile", "./techtask.key"]
+CMD [ "uvicorn", "index:app", "--reload", "--host", "0.0.0.0", "--ssl-certfile", "./techtask.crt", "--ssl-keyfile", "./techtask.key"]
