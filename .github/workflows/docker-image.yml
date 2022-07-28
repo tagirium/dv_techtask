@@ -26,9 +26,5 @@ jobs:
         working-directory: ./app
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/dv_techtask:$(git rev-parse --short "$GITHUB_SHA") .
 
-      - uses: pr-mpt/actions-commit-hash@v1
-
       - name: Docker push
-        env:
-          DOCKER_IMAGE_TAG: ${{ steps.commit.outputs.short }}
         run: docker push ${{ secrets.DOCKER_USERNAME }}/dv_techtask:$(git rev-parse --short "$GITHUB_SHA")
