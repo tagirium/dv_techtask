@@ -36,7 +36,7 @@ resource "aws_instance" "app_python" {
   }
 
   provisioner "local-exec" {
-    command = "sudo -H ansible-playbook -u ${var.ansible_user} -i '${aws_instance.app_python.public_ip},' --private-key ${var.private_key} -e 'ansible_python_interpreter=/usr/bin/python3' ../ansible/setup_app.yml"
+    command = "sudo ansible-playbook -u ${var.ansible_user} -i '${aws_instance.app_python.public_ip},' --private-key ${var.private_key} -e 'ansible_python_interpreter=/usr/bin/python3' ../ansible/setup_app.yml"
   }
 
   tags = {

@@ -22,7 +22,7 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Setup environment
-        run: pip3 install ansible boto3
+        run: sudo apt install ansible
 
       - name: Terraform Init
         id: init
