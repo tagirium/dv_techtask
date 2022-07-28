@@ -9,7 +9,7 @@ on:
       - master
 
 env:
-  DOCKER_IMAGE_TAG: $(git rev-parse --short "$GITHUB_SHA")
+  DOCKER_IMAGE_TAG: ${{git rev-parse --short "$GITHUB_SHA"}}
 
 jobs:
   push_to_registry:
